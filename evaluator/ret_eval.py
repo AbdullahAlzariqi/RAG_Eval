@@ -37,7 +37,6 @@ class retriever_evaluator:
                 ground_truth_df=pd.DataFrame(df),
                 dataset_metadata={"domain": "Data from Ministry of Health UAE"},)
 
-        print(self.session.get_ground_truth("groundtruth"))        
         return self.session.get_ground_truth("groundtruth")
 
     def _init_db(self, reset_db):
@@ -143,12 +142,12 @@ class rag_app:
     @instrument
     def retrieve_and_generate(self, query, k,):
         chunks = self.retriever.get_Chunks(query)
-        chunks_dict = [chunk["metadata"]["text"] for chunk in chunks]
+        chunks_dict = [chunk["metadata"]["text"]  for chunk in chunks]
         response = self.generator.generate(query, chunks_dict)
         i = self.queries.index(query)
         expected_response = self.expected_responses[i]
         scores = self._get_scores(chunks,expected_response)
-
+        print(f"retrieved and evaluated \"{query}\"")
         return response, chunks_dict, scores
 
 

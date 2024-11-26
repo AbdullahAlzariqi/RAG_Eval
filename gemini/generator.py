@@ -14,7 +14,7 @@ class gemini_generator:
     def generate(self, query, chunks):
         chunk_combined = ""
         for chunk in chunks:
-            chunk_combined += chunk + "\n"
+            chunk_combined += chunk+ "\n"
         prompt = f"You are a useful agent. You will answer this query: {query} by using these chunks:{chunk_combined}"
         res = self.model.generate_content(prompt).text
         return res
