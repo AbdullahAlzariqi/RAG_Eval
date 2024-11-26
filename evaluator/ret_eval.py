@@ -147,7 +147,7 @@ class rag_app:
         i = self.queries.index(query)
         expected_response = self.expected_responses[i]
         scores = self._get_scores(chunks,expected_response)
-        print(f"retrieved and evaluated \"{query}\"")
+        print(f"retrieved and evaluated {((i + 1) * 100) / 23}% \"{query}\"")
         return response, chunks_dict, scores
 
 
