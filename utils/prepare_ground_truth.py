@@ -1,6 +1,5 @@
 import csv
 import json
-
 class LatestGroundTruthCSV:
     """
     A class to process and return the latest ground truth CSV with an added 'expected_chunks' column.
@@ -72,6 +71,7 @@ class LatestGroundTruthCSV:
                     if len(expected_chunks) < i+1:
                         chunks_list = url_chunk_map[u.strip()]
                         expected_chunks.append(chunks_list)
+
                     chunks_list = url_chunk_map[u.strip()]
                     expected_chunks[i].extend(chunks_list)
         return expected_chunks
@@ -99,11 +99,12 @@ class LatestGroundTruthCSV:
         return ground_truth
 
 # Example usage
-csv_filepath = 'GroundTruths_Dataset - Sheet1.csv'
-json_filepath = 'URL-chunk_map.json'
+# csv_filepath = 'GroundTruths_Dataset - Sheet1.csv'
+# json_filepath = 'URL-chunk_map.json'
 
-processor = LatestGroundTruthCSV(csv_filepath, json_filepath)
-latest_ground_truth = processor.get_latest_ground_truth()
+# processor = LatestGroundTruthCSV(csv_filepath, json_filepath)
+# latest_ground_truth = processor.get_latest_ground_truth()
 
+# print(len(latest_ground_truth["expected_chunks"]))
 
 

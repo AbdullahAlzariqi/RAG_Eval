@@ -32,9 +32,27 @@ processor = LatestGroundTruthCSV(csv_filepath, json_filepath)
 ground_truth = processor.get_latest_ground_truth()
 
 
-ret = voyage_retriever()
-gen = cohere_generator()
+for i in range(len(ground_truth["query"])):
+    ground_truth["expected_chunks"][i] = [{"text":expected_chunk, "title":expected_chunk, "expected_score":score_chunk(expected_chunk,ground_truth["expected_response"][i])} for expected_chunk in ground_truth["expected_chunks"][i] ]
 
+import json
+
+def write_dict_to_json_file(dictionary):
+    """
+    Writes a dictionary to a JSON file named 'data.json'.
+
+    Args:
+        dictionary (dict): The dictionary to be written to the JSON file.
+    """
+    try:
+        with open("data.json", "w") as json_file:
+            json.dump(dictionary, json_file, indent=4)  # Pretty-print JSON with 4-space indent
+        print("Dictionary successfully written to data.json")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+# Example usage
+write_dict_to_json_file(ground_truth)
 
 
 
