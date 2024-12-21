@@ -113,11 +113,11 @@ class retriever_evaluator:
             feedbacks=self.feedback,
             )
         return tru_app
-    def run(self ):
+    def run(self, k=10 ):
         queries = self.ground_truth["query"]
         for i,query in enumerate(queries):
             with self.tru_app as recording:
-                self.rag_app.retrieve_and_generate(query,10)
+                self.rag_app.retrieve_and_generate(query,k)
     def leaderboard(self):
         self.session.get_leaderboard(app_ids=[self.tru_app.app_id])
 
@@ -142,7 +142,7 @@ class rag_app:
 
     @instrument
     def retrieve_and_generate(self, query, k,):
-        chunks = self.retriever.get_Chunks(query)
+        chunks = self.retriever.get_Chunks(query,k)
         chunks_dict = [chunk["metadata"]["text"]  for chunk in chunks]
         response = self.generator.generate(query, chunks_dict)
         i = self.queries.index(query)

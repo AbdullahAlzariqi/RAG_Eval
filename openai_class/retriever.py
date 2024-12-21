@@ -22,7 +22,7 @@ class openai_retriever:
 
         return embedding
     
-    def get_Chunks(self,query):
+    def get_Chunks(self,query,k=10):
         embedding = self.get_embeddings(query)
 
         pc = Pinecone(os.getenv("PINECONE_API_KEY"))
@@ -31,7 +31,7 @@ class openai_retriever:
 
         matches = index.query(
             vector=embedding,
-            top_k=5,
+            top_k=k,
             include_metadata=True
         )["matches"]
         # ids = []

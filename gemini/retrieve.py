@@ -18,7 +18,7 @@ class gemini_retriever:
             title="Embedding of single string")["embedding"]
         return result
     
-    def get_Chunks(self,query):
+    def get_Chunks(self,query, k=10):
         embedding = self.get_embeddings(query)
         
         pc = Pinecone(os.getenv("PINECONE_API_KEY"))
@@ -27,7 +27,7 @@ class gemini_retriever:
 
         matches = index.query(
             vector=embedding,
-            top_k=10,
+            top_k=k,
             include_metadata=True
         )["matches"]
         # ids = []

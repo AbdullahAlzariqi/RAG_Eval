@@ -24,7 +24,7 @@ class cohere_retriever:
              ).embeddings.float_[0]
         return embedding
     
-    def get_Chunks(self,query):
+    def get_Chunks(self,query,k=10):
         embedding = self.get_embeddings(query)
 
         pc = Pinecone(os.getenv("PINECONE_API_KEY"))
@@ -33,7 +33,7 @@ class cohere_retriever:
 
         matches = index.query(
             vector=embedding,
-            top_k=10,
+            top_k=k,
             include_metadata=True
         )["matches"]
         # ids = []

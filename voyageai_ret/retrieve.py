@@ -17,7 +17,7 @@ class voyage_retriever:
         result = vo.embed([query], model="voyage-3", input_type="document")
         return result.embeddings[0]
     
-    def get_Chunks(self,query):
+    def get_Chunks(self,query,k=10):
         embedding = self._get_embeddings(query)
 
         pc = Pinecone(os.getenv("PINECONE_API_KEY"))
@@ -26,7 +26,7 @@ class voyage_retriever:
 
         matches = index.query(
             vector=embedding,
-            top_k=10,
+            top_k=k,
             include_metadata=True
         )["matches"]
         # ids = []
