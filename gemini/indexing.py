@@ -83,24 +83,23 @@ with open("Cleaned_MOHAP.txt", encoding='utf-8') as f:
 
 text_splitter = RecursiveCharacterTextSplitter(
     # Set a really small chunk size, just to show.
-    chunk_size=512,
-    chunk_overlap=128,
+    chunk_size=1000,
+    chunk_overlap=200,
     is_separator_regex=False,
 )
 texts = text_splitter.create_documents([MOHAP_data])
 
-docs_to_json(texts,"ss.json")
 
 text_content = []
-urls = []
 for text in texts:
+    print(text)
     if text.page_content == "":
         texts.remove(text)
     elif text.page_content.startswith("URL: https:"):
-        urls.append(text.page_content)
         texts.remove(text)
     else :
         text_content.append(text)
+
 
 print("Before duplicate removal", len(texts))
 print("Before duplicate removal", type(texts))
@@ -112,6 +111,8 @@ for text in texts:
     else:
         seen_set.add(text.page_content)
 
+print("After duplicate removal", len(texts))
+print("After duplicate removal", type(texts))
 
 
 

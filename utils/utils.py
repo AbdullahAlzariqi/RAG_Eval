@@ -40,7 +40,15 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 class chunk_repo:
     def __init__(self, file_path, chunk_size=528, chunk_overlap=128):
-        print(file_path)
+        """
+        Initialize the chunk_repo object by reading the text from the file
+        and preparing the chunks based on the specified chunk size and overlap.
+        
+        Args:
+            file_path (str): Path to the text file to be chunked.
+            chunk_size (int): Number of characters in each chunk (default: 528).
+            chunk_overlap (int): Number of overlapping characters between consecutive chunks (default: 128).
+        """
         self.text = self._get_text(file_path)
         self.chunk_size = chunk_size
         self.chunk_overlap = chunk_overlap
@@ -56,9 +64,17 @@ class chunk_repo:
         return chunks
     
     def _get_text(self , file_path):
-        # Read the content of the file
-        with open(file_path, 'r') as file:
-            return file.read()
+        try:
+            with open(file_path, 'r', encoding='utf-8') as file:
+                return file.read()
+        except FileNotFoundError:
+            raise FileNotFoundError(f"File not found: {file_path}")
+        except PermissionError:
+            raise PermissionError(f"Permission denied: {file_path}")
+        except UnicodeDecodeError:
+            raise UnicodeDecodeError(f"Failed to decode file with utf-8 encoding")
+        except Exception as e:
+            raise Exception(f"Error reading file: {str(e)}")
 
 
 
@@ -446,3 +462,54 @@ class FastChunkURLMapper:
             f"Export completed in {self.timers['export']:.2f} seconds. "
             f"Total processing time: {sum(self.timers.values()):.2f} seconds"
         )
+
+
+
+
+from typing import List
+import logging
+
+# Step 1: Chunk the clean content file
+file_path = "./Cleaned_MOHAP.txt"  # Path to the clean text file
+chunk_size = 1000          # Customize the chunk size if needed
+chunk_overlap = 200       # Customize the overlap if needed
+
+# Create chunk_repo instance
+chunk_repo_instance = chunk_repo(file_path, chunk_size, chunk_overlap)
+
+# Get the chunks
+clean_chunks = chunk_repo_instance.chunks
+
+# Step 2: Parse raw content and map chunks to URLs
+raw_content_file_path = "crawled_content.txt"  # Path to the raw content file
+
+# Read raw content from the file
+try:
+    with open(file_path, 'r', encoding='utf-8') as file:
+        raw_content =  file.read()
+except FileNotFoundError:
+    raise FileNotFoundError(f"File not found: {file_path}")
+except PermissionError:
+    raise PermissionError(f"Permission denied: {file_path}")
+except UnicodeDecodeError:
+    raise UnicodeDecodeError(f"Failed to decode file with 'utf-8' encoding")
+except Exception as e:
+    raise Exception(f"Error reading file: {str(e)}")
+
+# Create a ChunkURLMapper instance
+chunk_mapper = ChunkURLMapper(
+    clean_chunks=clean_chunks,
+    raw_content=raw_content,
+    similarity_threshold=0.7,  # Adjust similarity threshold if needed
+    max_workers=4,            # Adjust max_workers based on your system's resources
+    log_level=logging.INFO    # Set logging level
+)
+
+# Step 3: Create the mapping
+mapping = chunk_mapper.create_mapping()
+
+# Step 4: Export the mapping to a JSON file
+output_path = "url_chunk_mapping_1000.json"  # Output file path for the JSON
+chunk_mapper.export_to_json(output_path)
+
+print(f"Mapping has been saved to {output_path}")

@@ -1,0 +1,13 @@
+2024-11-30 23:55:49,566 - ChunkURLMapper - INFO - Initializing ChunkURLMapper...
+2024-11-30 23:55:49,567 - ChunkURLMapper - INFO - Found 0 URL-content pairs
+2024-11-30 23:55:49,568 - ChunkURLMapper - INFO - Working with 528 clean chunks
+2024-11-30 23:55:49,569 - ChunkURLMapper - INFO - Initialization took 0.00 seconds
+2024-11-30 23:55:49,569 - ChunkURLMapper - INFO - Starting mapping creation...
+2024-11-30 23:55:49,572 - ChunkURLMapper - INFO - Mapping creation completed in 0.00 seconds
+2024-11-30 23:55:49,572 - ChunkURLMapper - INFO - Found matches for 0 URLs
+2024-11-30 23:55:49,582 - ChunkURLMapper - INFO - Exporting mapping to url_chunk_mapping_1000.json
+2024-11-30 23:55:49,583 - ChunkURLMapper - INFO - Starting mapping creation...
+2024-11-30 23:55:49,584 - ChunkURLMapper - INFO - Mapping creation completed in 0.00 seconds
+2024-11-30 23:55:49,585 - ChunkURLMapper - INFO - Found matches for 0 URLs
+2024-11-30 23:55:49,586 - ChunkURLMapper - INFO - Export completed in 0.00 seconds
+2024-11-30 23:55:49,586 - ChunkURLMapper - INFO - Results saved to url_chunk_mapping_1000.json

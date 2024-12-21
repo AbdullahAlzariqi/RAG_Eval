@@ -1,0 +1,45 @@
+2024-11-28 10:06:46,545 - ChunkURLMapper - INFO - Initializing ChunkURLMapper...
+2024-11-28 10:06:46,555 - ChunkURLMapper - INFO - Found 141 URL-content pairs
+2024-11-28 10:06:46,556 - ChunkURLMapper - INFO - Working with 638 clean chunks
+2024-11-28 10:06:46,558 - ChunkURLMapper - INFO - Initialization took 0.01 seconds
+2024-11-28 10:06:46,559 - ChunkURLMapper - INFO - Starting mapping creation...
+2024-11-28 10:09:56,358 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/registration-of-a-change-to-the-professional-title-of-a-doctor
+2024-11-28 10:09:56,380 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/re-licensing-of-licenses-for-nurses-and-medical-professionals
+2024-11-28 10:09:56,380 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/transfer-license-for-practicing-the-profession-of-pharmacist
+2024-11-28 10:09:56,381 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/licensing-of-a-visiting-doctor-from-the-uae
+2024-11-28 10:09:56,381 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/transfer-of-licenses-for-nurses-and-medical-professionals
+2024-11-28 10:09:56,382 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/licensing-of-a-visiting-foreign-doctor
+2024-11-28 10:09:56,382 - ChunkURLMapper - INFO - Removed 2 duplicate chunks for URL: https://mohap.gov.ae/en/services/license-for-healthcare-advertisement-for-a-non-healthcare-institution
+2024-11-28 10:09:56,382 - ChunkURLMapper - INFO - Removed 7 duplicate chunks for URL: https://mohap.gov.ae/en/about-us/projects-and-initiatives/mabrouk-ma-yak
+2024-11-28 10:09:56,383 - ChunkURLMapper - INFO - Removed 5 duplicate chunks for URL: https://mohap.gov.ae/en/about-us/projects-and-initiatives/%D8%A3%D8%AC%D8%B1-%D9%88%D8%B9%D8%A7%D9%81%D9%8A%D8%A9
+2024-11-28 10:09:56,383 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/changing-the-professional-titles-of-nursing-practitioners-and-medical-professionals
+2024-11-28 10:09:56,384 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/renew-license-of-healthcare-advertisement-for-a-licensed-healthcare-institution-in-the-uae
+2024-11-28 10:09:56,384 - ChunkURLMapper - INFO - Removed 2 duplicate chunks for URL: https://mohap.gov.ae/en/services/license-for-a-healthcare-program
+2024-11-28 10:09:56,385 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/cancellation-of-licenses-for-nurses-and-medical-professionals
+2024-11-28 10:09:56,385 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/issue-of-a-license-for-a-healthcare-advertisement-in-a-medical-or-commercial-directory
+2024-11-28 10:09:56,386 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/license-for-a-healthcare-advertisement-related-to-a-healthcare-event
+2024-11-28 10:09:56,386 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/re-licensing-of-a-pharmacist
+2024-11-28 10:09:56,387 - ChunkURLMapper - INFO - Removed 2 duplicate chunks for URL: https://mohap.gov.ae/en/services/license-for-a-healthcare-advertisement-on-a-website-or-digital-link
+2024-11-28 10:09:56,387 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/registration-of-a-change-to-the-professional-title-of-a-pharmacist
+2024-11-28 10:09:56,388 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/cancellation-of-a-license-to-practice-as-a-pharmacist
+2024-11-28 10:09:56,388 - ChunkURLMapper - INFO - Removed 2 duplicate chunks for URL: https://mohap.gov.ae/en/services/license-of-healthcare-advertisement-for-a-licensed-healthcare-institution-in-the-uae
+2024-11-28 10:09:56,389 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/licensing-of-pharmacists
+2024-11-28 10:09:56,389 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/new-service-details?serviceid=7
+2024-11-28 10:09:56,390 - ChunkURLMapper - INFO - Removed 2 duplicate chunks for URL: https://mohap.gov.ae/en/services/license-for-healthcare-advertisement-on-social-media
+2024-11-28 10:09:56,390 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/renewal-of-license-for-healthcare-advertising-through-call-centers
+2024-11-28 10:09:56,391 - ChunkURLMapper - INFO - Removed 2 duplicate chunks for URL: https://mohap.gov.ae/en/services/license-for-a-healthcare-advertisement-through-call-centers
+2024-11-28 10:09:56,391 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/licensing-of-a-doctor-or-dentist-to-utilize-the-services-of-a-private-health-facility
+2024-11-28 10:09:56,392 - ChunkURLMapper - INFO - Removed 2 duplicate chunks for URL: https://mohap.gov.ae/en/services/%D8%B7%D9%84%D8%A8-%D9%86%D8%B4%D8%B1-%D9%88%D8%B1%D9%82%D8%A9-%D8%A8%D8%AD%D8%AB%D9%8A%D8%A9
+2024-11-28 10:09:56,393 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/license-for-nursing-and-medical-professionals
+2024-11-28 10:09:56,395 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/new-service-details?serviceid=1
+2024-11-28 10:09:56,411 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/new-service-details?serviceid=5
+2024-11-28 10:09:56,414 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/re-licensing-of-a-doctor
+2024-11-28 10:09:56,416 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/renewal-of-a-license-for-a-healthcare-advertisement-in-a-medical-or-commercial-directory
+2024-11-28 10:09:56,417 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/transfer-of-a-doctors-license
+2024-11-28 10:09:56,418 - ChunkURLMapper - INFO - Removed 1 duplicate chunks for URL: https://mohap.gov.ae/en/services/cancellation-of-a-doctors-license
+2024-11-28 10:09:56,420 - ChunkURLMapper - INFO - Removed 2 duplicate chunks for URL: https://mohap.gov.ae/en/services/renewal-of-license-for-a-healthcare-advertisement-on-a-website-or-digital-link
+2024-11-28 10:09:56,422 - ChunkURLMapper - INFO - Mapping creation completed in 189.86 seconds
+2024-11-28 10:09:56,423 - ChunkURLMapper - INFO - Found matches for 134 URLs
+2024-11-28 10:09:56,431 - ChunkURLMapper - INFO - Exporting mapping to url_chunk_mapping_1000_v2.0.json
+2024-11-28 10:09:56,450 - ChunkURLMapper - INFO - Export completed in 0.02 seconds
+2024-11-28 10:09:56,451 - ChunkURLMapper - INFO - Results saved to url_chunk_mapping_1000_v2.0.json

@@ -1,0 +1,13 @@
+2024-11-27 23:58:30,752 - ChunkURLMapper - INFO - Initializing ChunkURLMapper...
+2024-11-27 23:58:30,759 - ChunkURLMapper - INFO - Found 141 URL-content pairs
+2024-11-27 23:58:30,759 - ChunkURLMapper - INFO - Working with 523 clean chunks
+2024-11-27 23:58:30,760 - ChunkURLMapper - INFO - Initialization took 0.01 seconds
+2024-11-27 23:58:30,760 - ChunkURLMapper - INFO - Starting mapping creation...
+2024-11-28 00:01:07,304 - ChunkURLMapper - INFO - Removed 5 duplicate chunks for URL: https://mohap.gov.ae/en/about-us/projects-and-initiatives/mabrouk-ma-yak
+2024-11-28 00:01:07,305 - ChunkURLMapper - INFO - Removed 4 duplicate chunks for URL: https://mohap.gov.ae/en/about-us/projects-and-initiatives/%D8%A3%D8%AC%D8%B1-%D9%88%D8%B9%D8%A7%D9%81%D9%8A%D8%A9
+2024-11-28 00:01:07,305 - ChunkURLMapper - INFO - Removed 2 duplicate chunks for URL: https://mohap.gov.ae/en/services/%D8%B7%D9%84%D8%A8-%D9%86%D8%B4%D8%B1-%D9%88%D8%B1%D9%82%D8%A9-%D8%A8%D8%AD%D8%AB%D9%8A%D8%A9
+2024-11-28 00:01:07,306 - ChunkURLMapper - INFO - Mapping creation completed in 156.54 seconds
+2024-11-28 00:01:07,306 - ChunkURLMapper - INFO - Found matches for 134 URLs
+2024-11-28 00:01:07,310 - ChunkURLMapper - INFO - Exporting mapping to url_chunk_mapping_1000.json
+2024-11-28 00:01:07,321 - ChunkURLMapper - INFO - Export completed in 0.01 seconds
+2024-11-28 00:01:07,322 - ChunkURLMapper - INFO - Results saved to url_chunk_mapping_1000.json

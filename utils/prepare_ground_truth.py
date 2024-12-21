@@ -98,13 +98,30 @@ class LatestGroundTruthCSV:
         self.ground_truth = ground_truth  # Cache the result
         return ground_truth
 
-# Example usage
+# # Example usage
 # csv_filepath = 'GroundTruths_Dataset - Sheet1.csv'
-# json_filepath = 'URL-chunk_map.json'
+# json_filepath = 'url_chunk_mapping_1000_v2.0.json'
 
 # processor = LatestGroundTruthCSV(csv_filepath, json_filepath)
 # latest_ground_truth = processor.get_latest_ground_truth()
 
-# print(len(latest_ground_truth["expected_chunks"]))
 
+
+# import json
+
+# def write_dict_to_json(data, filename):
+#     """
+#     Write a dictionary to a JSON file.
+
+#     :param data: Dictionary to write into a JSON file.
+#     :param filename: Name of the JSON file to be created.
+#     """
+#     try:
+#         with open(filename, 'w', encoding='utf-8') as json_file:
+#             json.dump(data, json_file, ensure_ascii=False, indent=4)
+#         print(f"Data successfully written to {filename}")
+#     except Exception as e:
+#         print(f"An error occurred: {e}")
+
+# # Example usage
 

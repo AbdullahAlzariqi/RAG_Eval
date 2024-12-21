@@ -26,16 +26,17 @@ class retriever_evaluator:
 
 ### Move the addition of the scores  to prepare ground truth 
     def _init_ground_truth(self,ground_truth):
+        expected_chunks = ground_truth["expected_chunks"]
+        # print(f"length: {len(expected_chunks)} length of child {len(expected_chunks[0])} \ntype:{type(expected_chunks)} type_child {type(expected_chunks[0])} \r\n expected {expected_chunks}")
         for i in range(len(ground_truth["query"])):
             queries =  ground_truth["query"]
             expected_responses =  ground_truth["expected_response"]
-            expected_chunks = ground_truth["expected_chunks"]
-            expected_chunks[i] = [{"text":expected_chunk, "title":expected_chunk, "expected_score":score_chunk(expected_chunk,expected_responses[i])} for expected_chunk in expected_chunks[i] ]
+            # expected_chunks[i] = [{"text":expected_chunk, "title":expected_chunk, "expected_score":score_chunk(expected_chunk,expected_responses[i])} for expected_chunk in expected_chunks[i] ]
             df={"query":[queries[i]],"expected_response":[expected_responses[i]],"expected_chunks":[expected_chunks[i]],"query_id":[str(i+1)]}
             self.session.add_ground_truth_to_dataset(
                 dataset_name="groundtruth",
                 ground_truth_df=pd.DataFrame(df),
-                dataset_metadata={"domain": "Data from Ministry of Health UAE"},)
+                dataset_metadata={"domain": "Data from Ministry of Health UAE"})
 
         return self.session.get_ground_truth("groundtruth")
 
