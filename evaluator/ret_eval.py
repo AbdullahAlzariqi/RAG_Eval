@@ -103,6 +103,8 @@ class retriever_evaluator:
             )
             .on(arg_query_selector)
             .on(arg_completion_str_selector))
+        
+       
         return [f_ir_hit_rate, f_ndcg_at_k, f_recall_at_k, f_groundtruth_answer]
 
     def _init_app(self):
